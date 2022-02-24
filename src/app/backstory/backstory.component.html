@@ -1,0 +1,38 @@
+<hr>
+<label for="hometown">Home Town:&nbsp;</label>
+<input name="hometown" [(ngModel)] = "homeTown">
+<br>
+<br>
+<label for="profession">Profession:&nbsp;</label>
+<input for="profession" [(ngModel)]="profession">
+<br>
+<br>
+<label for="petname">Pet's Name:&nbsp;</label>
+<input for="petname" [(ngModel)]="petName">
+<br>
+<br>
+<label for="petspecies">Type of Pet I have:&nbsp;</label>
+<input for="petspecies" [(ngModel)]="petSpecies">
+<br>
+<br>
+<label for="hobbyname">Favorite Hobby:&nbsp;</label>
+<input for="hobbyname" [(ngModel)]="hobbyName">
+<br>
+<br>
+<label for="newcity">City you moved to:&nbsp;</label>
+<input for="newcity" [(ngModel)]="newCity">
+<br>
+<br>
+<label for="numberofyears">How long you have lived there: &nbsp;</label>
+<input for="numberofyears" [(ngModel)]="numberOfYears">
+<br>
+<br>
+<h3>Back Story</h3>
+<p> I have spent my whole life working as a {{profession}} in {{homeTown}}.</p>
+<p>
+    I have a pet {{petName}} who is a {{petSpecies}} and my favorite hobby is {{hobbyName}}.
+</p>
+<p>
+    While I grew up in {{homeTown}}, I am now living in {{newCity}}. 
+    I have been living ther for {{numberOfYears}} years!!
+</p>
