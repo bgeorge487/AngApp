@@ -1,0 +1,29 @@
+<h1>Welcome to the  dungeon!</h1>
+<br>
+<div>
+    <form #dungeonForm="ngForm" (ngSubmit)="getDungeonName(dungeonForm)">
+      <label for="dungeonName">Enter in a new name for this dungeon!</label>
+      <input name="dungeonName" id="dungeonName" ngModel />
+      <div>
+        <button>Click to name the dungeon and leave your mark, adventurer</button>
+      </div>
+    </form>
+  </div>
+<br>
+  <h2>Henceforth it shall be known as: {{newDungeonName}}</h2>
+
+<br>
+<h3>There are currently {{monsters.length}} creatures here:</h3>
+<li *ngFor="let monster of monsters">{{monster}}</li>
+<br>
+  <p>Possible gold reward for completing the dungeon: {{goldLoot | currency}}</p>
+<br>
+<p>The difficulty rating of this dungeon: {{difficultyRating | percent}}</p>
+<br>
+  <h2><strong>WARNING! SPOILERS AHEAD!</strong></h2>
+<br>
+<button (click)="showBossSpoiler()">{{bossButtonText}}</button>
+<div *ngIf="showBoss">
+<app-boss-monster></app-boss-monster>
+
+</div>

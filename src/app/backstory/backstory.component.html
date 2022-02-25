@@ -27,6 +27,8 @@
 <input for="numberofyears" [(ngModel)]="numberOfYears">
 <br>
 <br>
+<button (click)="toggleStory()">{{buttonText}}</button>
+<div *ngIf="showStory">
 <h3>Back Story</h3>
 <p> I have spent my whole life working as a {{profession}} in {{homeTown}}.</p>
 <p>
@@ -36,3 +38,5 @@
     While I grew up in {{homeTown}}, I am now living in {{newCity}}. 
     I have been living ther for {{numberOfYears}} years!!
 </p>
+</div>
+<br>

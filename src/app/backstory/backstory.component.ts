@@ -16,6 +16,18 @@ export class BackstoryComponent implements OnInit {
   newCity: string ="Las Vegas";
   numberOfYears: number = 16;
 
+  showStory: boolean = false;
+  buttonText: string = "Show";
+
+  toggleStory(): void {
+    this.showStory = !this.showStory;
+    if(this.showStory){
+      this.buttonText = "Hide";
+    } else{
+      this.buttonText = "Show";
+    }
+  }
+  
   ngOnInit(): void {
   }
 
