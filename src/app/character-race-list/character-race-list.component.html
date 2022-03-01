@@ -1,0 +1,16 @@
+<p>character-race-list works!</p>
+<h1>
+    Current available character Races:
+</h1>
+<br>
+<div *ngFor="let race of characterRaces.results">
+    <li style="font-size: large; padding-bottom: 1em;">
+      {{race.name}}
+      <ul>
+        <app-character-race-details></app-character-race-details>
+      </ul>
+    </li>
+
+
+</div>
+

@@ -1,11 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IClass } from './interfaces/IClass';
+import { IRace } from './interfaces/IRace';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RepositoryService {
+
+  private apiUri: string = "https://www.dnd5eapi.co/api/classes";
+  private apiUriTwo:string = "https://www.dnd5eapi.co/api/races";
 
   classList: IClass[] =[
     {index: "barbarian",name:"Barb",healthPoints:50,mainWeapon: "war hammer"},
@@ -13,7 +17,7 @@ export class RepositoryService {
     {index: "fighter",name:"Karen",healthPoints:60,mainWeapon: "fists"}
   ]
 
-  private apiUri: string = "https://www.dnd5eapi.co/api/classes";
+  raceList: IRace[] = []
 
 
   constructor(private http: HttpClient) { }
@@ -26,4 +30,17 @@ export class RepositoryService {
   getClassDetail(index:string){
     return this.classList.find(c => c.index === index)
   }
+
+  getCharacterRaces(){
+    return this.http.get(this.apiUriTwo);
+  }
+
+  getCharacterRaceDetail(index: string){
+    return this.raceList.find(r => r.index === index)
+  }
+
+  /*
+  return this.http.get(`${apiUriTwo}/${index}`)
+  */
+  
 }

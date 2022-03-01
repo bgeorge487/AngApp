@@ -1,0 +1,10 @@
+<h1>Welcome to Town, stranger!</h1>
+
+<p>Our current residents are: </p>
+<div *ngFor="let npc of townsPeople">
+    <br>
+    <h2>{{npc.name}}</h2>
+    <li>Profession: {{npc.profession}}</li>
+    <li *ngIf="npc.isAnAlly === true">Friendly: Yes!</li>
+    <li *ngIf="npc.isAnAlly === false">Friendly: No, steer clear!</li>
+</div>

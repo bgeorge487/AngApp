@@ -1,10 +1,11 @@
+<h2>Classes</h2>
+
 <div>
-    <h2>Classes</h2>
     <div *ngFor="let class of characterClasses.results">
-     <li>
+    <li>
         <h3><span>{{class.name}}</span></h3>
-    </li>
+    
         <app-class-details index={{class.index}}> </app-class-details>
-     
+    </li>
     </div>
 </div>

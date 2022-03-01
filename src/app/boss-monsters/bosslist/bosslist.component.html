@@ -1,0 +1,14 @@
+<h3>Boss List: </h3>
+<hr />
+<br>
+<div *ngFor="let boss of bossMonsters">
+    <span>
+        {{boss.name}}
+        <li>Health: {{boss.healthPoints}}</li>
+        <li>weakness: {{boss.weakness}}</li>
+    </span>
+    <br>
+
+</div>
+
+<app-deadliest-boss></app-deadliest-boss>
